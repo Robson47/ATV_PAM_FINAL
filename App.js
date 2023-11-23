@@ -6,7 +6,6 @@ import Login from './screens/Login';
 import CreateUser from './screens/CreateUser';
 import DrawerMenu from './drawerMenu/DrawerMenu';
 import Feed from './screens/Feed';
-import DetailBook from './screens/DetailBook';
 
 const Stack = createNativeStackNavigator();
 

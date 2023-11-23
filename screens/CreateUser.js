@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     },
     containerTextInput: {
         flexDirection: 'row',
-        borderBottomColor: '#540214',
+        borderBottomColor: '#3e065c',
         borderBottomWidth: 1,
         paddingBottom: 8,
         marginBottom: 25,
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
         fontSize: 12
     },
     btnRegister: {
-        backgroundColor: '#540214',
+        backgroundColor: '#3e065c',
         padding: 20,
         borderRadius: 10,
         marginBottom: 20,
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
         marginBottom: 15
     },
     btnLogin: {
-        color: '#db0231',
+        color: '#50047a',
         fontWeight: '700'
     }
 });

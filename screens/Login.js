@@ -71,7 +71,7 @@ export default function Login({ navigation }) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#000000',
+        backgroundColor: '#0a0a0a',
         padding: 10,
         paddingTop: 50,
     },
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     },
     containerTextInput: {
         flexDirection: 'row',
-        borderBottomColor: '#540214',
+        borderBottomColor: '#3e065c',
         borderBottomWidth: 1,
         paddingBottom: 8,
         marginBottom: 25,
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
         fontSize: 12
     },
     btnLogin: {
-        backgroundColor: '#540214',
+        backgroundColor: '#3e065c',
         padding: 20,
         borderRadius: 10,
         marginBottom: 20,
@@ -125,10 +125,10 @@ const styles = StyleSheet.create({
         marginBottom: 15
     },
     btnLogWith: {
-        backgroundColor: '#540214',
-        borderBlockColor: '#b5042a',
-        borderBlockEndColor: '#b5042a',
-        borderBlockStartColor: '#b5042a',
+        backgroundColor: '#3e065c',
+        borderBlockColor: '#50047a',
+        borderBlockEndColor: '#50047a',
+        borderBlockStartColor: '#50047a',
         borderWidth: 2,
         borderRadius: 10,
         paddingHorizontal: 20,
@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
         marginRight: 10
     },
     btnRegister: {
-        color: '#db0231',
+        color: '#50047a',
         fontWeight: '700'
     }
 });

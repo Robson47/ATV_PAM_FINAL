@@ -129,7 +129,7 @@ export default function FeedBook() {
                 data={produtos}
                 renderItem={bookItem}
                 ListEmptyComponent={<Text>A LISTA DE LIVROS ESTÁ VAZIA...</Text>}
-                keyExtractor={produtos => livros.codigo_livro}
+                keyExtractor={produtos => produtos.codigo_livro}
             />
         </SafeAreaView>
     );
@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
     container: {
         marginTop: 118,
         flex: 1,
-        backgroundColor: '#161c3d',
+        backgroundColor: '#000000',
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -169,9 +169,9 @@ const styles = StyleSheet.create({
         padding: 10,
         borderWidth: 2,
         borderRadius: 10,
-        borderColor: '#004ad1',
+        borderColor: '#630cab',
         marginBottom: 10,
-        backgroundColor: '#013491',
+        backgroundColor: '#1c1b1c',
     },
     book_image: {
         width: 150,
@@ -200,7 +200,7 @@ const styles = StyleSheet.create({
     },
     book_button_details: {
         alignItems: 'center',
-        backgroundColor: '#057d2f',
+        backgroundColor: '#8c00ff',
         padding: 10,
         borderRadius: 5,
         marginTop: 90,

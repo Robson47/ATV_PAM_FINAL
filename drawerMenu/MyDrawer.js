@@ -7,20 +7,23 @@ import TelaDrawer3 from '../TelaDrawer3';
 
 const Drawer = createDrawerNavigator();
 
+const bgDrawer = '#1c1b1c';
+const bgItemDrawer = '#8c00ff'; 
+
 export default function MyDrawer() {
     return (
         <Drawer.Navigator>
             <Drawer.Screen
-                name='FeedBook'
-                component={FeedBook}
+                name='Feed'
+                component={Feed}
                 options={{
-                    title: 'Feed de Livros',
-                    headerBackgroundContainerStyle: { backgroundColor: '#012a75' },
+                    title: 'Feed',
+                    headerBackgroundContainerStyle: { backgroundColor: '#780bb3' },
                     headerTitleStyle: { color: 'white' },
                     headerTransparent: true,
                     drawerLabelStyle: { color: 'white' },
-                    drawerStyle: { backgroundColor: '#012a75' },
-                    drawerItemStyle: { backgroundColor: '#0440b0' }
+                    drawerStyle: { backgroundColor: bgDrawer },
+                    drawerItemStyle: { backgroundColor: bgItemDrawer },
                 }}
             />
 
@@ -32,8 +35,8 @@ export default function MyDrawer() {
                     headerTransparent: true,
                     headerShown: false,
                     drawerLabelStyle: { color: 'white' },
-                    drawerStyle: { backgroundColor: '#012a75' },
-                    drawerItemStyle: { backgroundColor: '#0440b0' }
+                    drawerStyle: { backgroundColor: bgDrawer },
+                    drawerItemStyle: { backgroundColor: bgItemDrawer }
                 }}
             />
 
@@ -45,8 +48,8 @@ export default function MyDrawer() {
                     headerTransparent: true,
                     headerShown: false,
                     drawerLabelStyle: { color: 'white' },
-                    drawerStyle: { backgroundColor: '#012a75', },
-                    drawerItemStyle: { backgroundColor: '#0440b0' }
+                    drawerStyle: { backgroundColor: bgDrawer, },
+                    drawerItemStyle: { backgroundColor: bgItemDrawer }
                 }}
             />
 
@@ -58,8 +61,8 @@ export default function MyDrawer() {
                     headerTransparent: true,
                     headerShown: false,
                     drawerLabelStyle: { color: 'white' },
-                    drawerStyle: { backgroundColor: '#012a75', },
-                    drawerItemStyle: { backgroundColor: '#0440b0' }
+                    drawerStyle: { backgroundColor: bgDrawer, },
+                    drawerItemStyle: { backgroundColor: bgItemDrawer }
                 }}
             />
         </Drawer.Navigator>
