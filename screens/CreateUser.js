@@ -32,7 +32,9 @@ export default function CreateUser({ navigation }) {
             </View>
 
             {/* BOTÃO DE LOGIN*/}
-            <TouchableOpacity style={styles.btnRegister}>
+            <TouchableOpacity style={styles.btnRegister} onPress={() => {
+                navigation.navigate('DrawerMenu');
+            }}>
                 <Text style={styles.txtRegister}>
                     Login
                 </Text>
@@ -40,7 +42,7 @@ export default function CreateUser({ navigation }) {
 
             <View style={styles.containerLogWith}>
                 <TouchableOpacity onPress={() => {
-                    navigation.navigate('Login')
+                    navigation.navigate('Login');
                 }}>
                     <Text style={styles.btnLogin}>
                         JÁ TENHO UMA CONTA
