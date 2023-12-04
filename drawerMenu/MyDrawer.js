@@ -1,7 +1,7 @@
 import { createDrawerNavigator, DrawerContentScrollView, DrawerItemList, DrawerItem } from '@react-navigation/drawer';
 
 import Feed from '../screens/Feed';
-import TelaDrawer1 from '../TelaDrawer1';
+import Category from '../screens/Category';
 import TelaDrawer2 from '../TelaDrawer2';
 import TelaDrawer3 from '../TelaDrawer3';
 
@@ -28,10 +28,10 @@ export default function MyDrawer() {
             />
 
             <Drawer.Screen
-                name='Tela1'
-                component={TelaDrawer1}
+                name='Categorias'
+                component={Category}
                 options={{
-                    title: 'Tela 1',
+                    title: 'Categorias',
                     headerTransparent: true,
                     headerShown: false,
                     drawerLabelStyle: { color: 'white' },

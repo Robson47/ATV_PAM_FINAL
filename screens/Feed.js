@@ -1,4 +1,5 @@
 import { Image, FlatList, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import Category from './Category';
 
 const produtos = [
     {
@@ -7,6 +8,7 @@ const produtos = [
         autor: 'Ubisoft',
         preco_item: '79,00',
         imagem_item: require('../assets/imagens/capas/acrevelations-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 2,
@@ -14,6 +16,7 @@ const produtos = [
         autor: 'Allan Jefferson',
         preco_item: '29,99',
         imagem_item: require('../assets/imagens/capas/Bomba_Patch_Titan-V2-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 3,
@@ -21,6 +24,7 @@ const produtos = [
         autor: 'Allan Jefferson',
         preco_item: '29,99',
         imagem_item: require('../assets/imagens/capas/bomba13-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 4,
@@ -28,6 +32,7 @@ const produtos = [
         autor: 'Eletronic Arts',
         preco_item: '39,99',
         imagem_item: require('../assets/imagens/capas/Black-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 5,
@@ -35,6 +40,7 @@ const produtos = [
         autor: 'Rockstar Games',
         preco_item: '29,99',
         imagem_item: require('../assets/imagens/capas/Bully-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 6,
@@ -42,6 +48,7 @@ const produtos = [
         autor: 'High Voltage Software\n1st Playable Productions',
         preco_item: '29,90',
         imagem_item: require('../assets/imagens/capas/ben10-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 7,
@@ -49,6 +56,7 @@ const produtos = [
         autor: 'Papaya Studio\n1st Playable Productions',
         preco_item: '39,90',
         imagem_item: require('../assets/imagens/capas/ben10vilgax-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 8,
@@ -56,6 +64,7 @@ const produtos = [
         autor: 'Allan Jefferson',
         preco_item: '29,90',
         imagem_item: require('../assets/imagens/capas/bombapatch5.1-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 9,
@@ -63,6 +72,7 @@ const produtos = [
         autor: 'Allan Jefferson',
         preco_item: '29,90',
         imagem_item: require('../assets/imagens/capas/bombapatch5-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 10,
@@ -70,6 +80,7 @@ const produtos = [
         autor: 'Allan Jefferson',
         preco_item: '29,90',
         imagem_item: require('../assets/imagens/capas/bombapatch8.4-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 11,
@@ -77,6 +88,7 @@ const produtos = [
         autor: 'Allan Jefferson',
         preco_item: '29,99',
         imagem_item: require('../assets/imagens/capas/Brazukas_Brasileirão_2008-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 12,
@@ -84,6 +96,7 @@ const produtos = [
         autor: 'Criterion Games',
         preco_item: '39,99',
         imagem_item: require('../assets/imagens/capas/Burnout_3-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 13,
@@ -91,6 +104,7 @@ const produtos = [
         autor: 'Activison',
         preco_item: '35,99',
         imagem_item: require('../assets/imagens/capas/cod2-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 14,
@@ -98,6 +112,7 @@ const produtos = [
         autor: 'Activision',
         preco_item: '35,99',
         imagem_item: require('../assets/imagens/capas/cod3-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 15,
@@ -105,6 +120,7 @@ const produtos = [
         autor: 'Activision',
         preco_item: '35,99',
         imagem_item: require('../assets/imagens/capas/cod4-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 16,
@@ -112,6 +128,7 @@ const produtos = [
         autor: 'Activision',
         preco_item: '56,50',
         imagem_item: require('../assets/imagens/capas/codbo2-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 17,
@@ -119,6 +136,7 @@ const produtos = [
         autor: 'Activision',
         preco_item: '35,99',
         imagem_item: require('../assets/imagens/capas/codwat-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 18,
@@ -126,6 +144,7 @@ const produtos = [
         autor: 'Vicarious Visions\nKAOLink\nDriver-Inter, Ltd.',
         preco_item: '20,99',
         imagem_item: require('../assets/imagens/capas/crashkart-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 19,
@@ -133,6 +152,7 @@ const produtos = [
         autor: 'Crytek\nEletronic Arts',
         preco_item: '25,99',
         imagem_item: require('../assets/imagens/capas/crysis-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 20,
@@ -140,6 +160,7 @@ const produtos = [
         autor: 'Capcom',
         preco_item: '36,99',
         imagem_item: require('../assets/imagens/capas/deadrising2-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 21,
@@ -147,6 +168,7 @@ const produtos = [
         autor: 'Atari',
         preco_item: '49,99',
         imagem_item: require('../assets/imagens/capas/dbzb3-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 22,
@@ -154,6 +176,7 @@ const produtos = [
         autor: 'Ban Dai',
         preco_item: '49,99',
         imagem_item: require('../assets/imagens/capas/dbzb2-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 23,
@@ -161,6 +184,7 @@ const produtos = [
         autor: 'Ban Dai Namco\nDimps',
         preco_item: '36,99',
         imagem_item: require('../assets/imagens/capas/dbzb-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 24,
@@ -168,6 +192,7 @@ const produtos = [
         autor: 'Tecmo',
         preco_item: '25,99',
         imagem_item: require('../assets/imagens/capas/fatalframe-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 25,
@@ -175,6 +200,7 @@ const produtos = [
         autor: 'Santa Monica',
         preco_item: '69,99',
         imagem_item: require('../assets/imagens/capas/gow-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 26,
@@ -182,6 +208,7 @@ const produtos = [
         autor: 'Sony Computer Entertainment',
         preco_item: '49,99',
         imagem_item: require('../assets/imagens/capas/gt4-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 27,
@@ -189,6 +216,7 @@ const produtos = [
         autor: 'Santa Monica',
         preco_item: '69,99',
         imagem_item: require('../assets/imagens/capas/gow2-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 28,
@@ -196,6 +224,7 @@ const produtos = [
         autor: 'Rockstar Games',
         preco_item: '39,90',
         imagem_item: require('../assets/imagens/capas/gtasa-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 29,
@@ -203,6 +232,7 @@ const produtos = [
         autor: 'Rockstar Games\nMicrosoft',
         preco_item: '39,90',
         imagem_item: require('../assets/imagens/capas/gtate-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 30,
@@ -210,6 +240,7 @@ const produtos = [
         autor: 'RedOctane\nHarmonix',
         preco_item: '29,99',
         imagem_item: require('../assets/imagens/capas/ghtm-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 31,
@@ -217,6 +248,7 @@ const produtos = [
         autor: 'RedOctane\nHarmonix\nActivision',
         preco_item: '49,99',
         imagem_item: require('../assets/imagens/capas/gh3-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 32,
@@ -224,6 +256,7 @@ const produtos = [
         autor: 'Activison',
         preco_item: '49,90',
         imagem_item: require('../assets/imagens/capas/Gun-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 33,
@@ -231,6 +264,7 @@ const produtos = [
         autor: 'Eletronic Arts',
         preco_item: '49,90',
         imagem_item: require('../assets/imagens/capas/nfshp2-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 34,
@@ -238,6 +272,7 @@ const produtos = [
         autor: 'Eletronic Arts',
         preco_item: '59,90',
         imagem_item: require('../assets/imagens/capas/nfsu2-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 35,
@@ -245,6 +280,7 @@ const produtos = [
         autor: 'Mighty Rocket Studio',
         preco_item: '39,90',
         imagem_item: require('../assets/imagens/capas/Obscure2-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 36,
@@ -252,6 +288,7 @@ const produtos = [
         autor: 'Mighty Rocket Studio',
         preco_item: '29,99',
         imagem_item: require('../assets/imagens/capas/Obscure-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 37,
@@ -259,6 +296,7 @@ const produtos = [
         autor: 'Valve',
         preco_item: '49,00',
         imagem_item: require('../assets/imagens/capas/portal-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 38,
@@ -266,6 +304,7 @@ const produtos = [
         autor: 'Capcom',
         preco_item: '79,59',
         imagem_item: require('../assets/imagens/capas/re4-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 39,
@@ -273,6 +312,7 @@ const produtos = [
         autor: 'Capcom',
         preco_item: '39,60',
         imagem_item: require('../assets/imagens/capas/recv-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 40,
@@ -280,6 +320,7 @@ const produtos = [
         autor: 'Team Silent\nKonami',
         preco_item: '39,99',
         imagem_item: require('../assets/imagens/capas/sho-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 41,
@@ -287,6 +328,7 @@ const produtos = [
         autor: 'Team Silent\nKonami',
         preco_item: '39,99',
         imagem_item: require('../assets/imagens/capas/shsm-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 42,
@@ -294,6 +336,7 @@ const produtos = [
         autor: 'Bluepoint Games\nTeam Ico\nJapan Studio',
         preco_item: '169,99',
         imagem_item: require('../assets/imagens/capas/sotc-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 43,
@@ -301,6 +344,7 @@ const produtos = [
         autor: 'Neversoft\nTreyarch\nNatsume\nIdeaworks Game Studio',
         preco_item: '49,00',
         imagem_item: require('../assets/imagens/capas/thd-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 44,
@@ -308,6 +352,7 @@ const produtos = [
         autor: 'Neversoft\nTreyarch\nNatsume\nIdeaworks Game Studioo',
         preco_item: '49,90',
         imagem_item: require('../assets/imagens/capas/thpg-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
     {
         codigo_item: 45,
@@ -315,11 +360,12 @@ const produtos = [
         autor: 'Neversoft\nTreyarch\nNatsume\nIdeaworks Game Studio',
         preco_item: '59,99',
         imagem_item: require('../assets/imagens/capas/thu-show.jpg'),
+        cod_categoria: Category.cod_categoria
     },
 ];
 
 // COMPONENTE DE ITEM DE RENDERIZAÇÃO
-const bookItem = ({ item }) => {
+const Item = ({ item }) => {
     return (
         <View style={styles.item_container}>
             <Image
@@ -330,7 +376,7 @@ const bookItem = ({ item }) => {
                 <Text style={styles.item_data}>{item.titulo_item}</Text>
                 <Text style={styles.item_author}>{item.autor}</Text>
                 <Text style={styles.item_data}>{item.preco_item}</Text>
-
+                <Text style={styles.item_data}>{Category.nome_categoria}</Text>
                 <TouchableOpacity style={styles.item_button_details}><Text style={styles.item_button_text}>Detalhes</Text></TouchableOpacity>
 
             </View>
@@ -344,7 +390,7 @@ export default function FeedBook() {
         <SafeAreaView style={styles.container}>
             <FlatList
                 data={produtos}
-                renderItem={bookItem}
+                renderItem={Item}
                 ListEmptyComponent={<Text>A LISTA DE LIVROS ESTÁ VAZIA...</Text>}
                 keyExtractor={produtos => produtos.codigo_item}
             />
