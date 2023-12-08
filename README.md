@@ -3,7 +3,9 @@ Aplicativo em React-Native como atividade final para um curso de desenvolvimento
 
 <div align='center'>
 
-  [![Static Badge](https://img.shields.io/badge/Expo?style=flat&logo=expo&logoColor=black&label=black&labelColor=white&color=white)](https://docs.expo.dev/)
+  [![Static Badge](https://img.shields.io/badge/Expo-docs-brightgreen?style=for-the-badge&logo=expo&logoColor=%23000020&color=%23040840)](https://docs.expo.dev/)
+  [![Static Badge](https://img.shields.io/badge/10.2.4-white?style=for-the-badge&logo=npm&logoColor=red&label=npm&color=orange)](https://docs.npmjs.com/)
+  [![Static Badge](https://img.shields.io/badge/docs-white?style=for-the-badge&logo=react&logoColor=%2361DAFB&label=react-native&color=%230c147a)](https://reactnative.dev/)
 
 </div>
 
