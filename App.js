@@ -4,8 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import Login from './screens/Login';
 import CreateUser from './screens/CreateUser';
-import DrawerMenu from './drawerMenu/DrawerMenu';
-import Feed from './screens/Feed';
+import Menu from './drawerMenu/DrawerMenu';
 
 const Stack = createNativeStackNavigator();
 
@@ -34,10 +33,10 @@ export default function App() {
         />
 
         <Stack.Screen
-          name="DrawerMenu"
-          component={DrawerMenu}
+          name="Home"
+          component={Menu}
           options={{
-            title: "MENU",
+            title: "Inicio",
             headerTransparent: true,
             headerShown: false
           }}

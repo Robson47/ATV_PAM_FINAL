@@ -2,8 +2,8 @@ import { createDrawerNavigator, DrawerContentScrollView, DrawerItemList, DrawerI
 
 import Feed from '../screens/Feed';
 import Category from '../screens/Category';
-import TelaDrawer2 from '../TelaDrawer2';
-import TelaDrawer3 from '../TelaDrawer3';
+import Menu from '../screens/Menu';
+
 
 const Drawer = createDrawerNavigator();
 
@@ -12,14 +12,28 @@ const bgItemDrawer = '#8c00ff';
 
 export default function MyDrawer() {
     return (
-        <Drawer.Navigator>
+        <Drawer.Navigator>            
+            <Drawer.Screen
+                name='Menu'
+                component={Menu}
+                options={{
+                    title: 'Home',
+                    headerTransparent: true,
+                    headerShown: true,
+                    headerBackgroundContainerStyle: { backgroundColor: '#780bb3' },
+                    headerTitleStyle: { color: 'white' },
+                    drawerLabelStyle: { color: 'white' },
+                    drawerStyle: { backgroundColor: bgDrawer, },
+                    drawerItemStyle: { backgroundColor: bgItemDrawer }
+                }}
+            />
+
             <Drawer.Screen
                 name='Feed'
                 component={Feed}
                 options={{
                     title: 'Feed',
-                    headerBackgroundContainerStyle: { backgroundColor: '#780bb3' },
-                    headerTitleStyle: { color: 'white' },
+                    headerShown: false,
                     headerTransparent: true,
                     drawerLabelStyle: { color: 'white' },
                     drawerStyle: { backgroundColor: bgDrawer },
@@ -36,32 +50,6 @@ export default function MyDrawer() {
                     headerShown: false,
                     drawerLabelStyle: { color: 'white' },
                     drawerStyle: { backgroundColor: bgDrawer },
-                    drawerItemStyle: { backgroundColor: bgItemDrawer }
-                }}
-            />
-
-            <Drawer.Screen
-                name='Tela2'
-                component={TelaDrawer2}
-                options={{
-                    title: 'Tela 2',
-                    headerTransparent: true,
-                    headerShown: false,
-                    drawerLabelStyle: { color: 'white' },
-                    drawerStyle: { backgroundColor: bgDrawer, },
-                    drawerItemStyle: { backgroundColor: bgItemDrawer }
-                }}
-            />
-
-            <Drawer.Screen
-                name='Tela3'
-                component={TelaDrawer3}
-                options={{
-                    title: 'Tela 3',
-                    headerTransparent: true,
-                    headerShown: false,
-                    drawerLabelStyle: { color: 'white' },
-                    drawerStyle: { backgroundColor: bgDrawer, },
                     drawerItemStyle: { backgroundColor: bgItemDrawer }
                 }}
             />

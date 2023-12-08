@@ -33,7 +33,7 @@ export default function CreateUser({ navigation }) {
 
             {/* BOTÃO DE LOGIN*/}
             <TouchableOpacity style={styles.btnRegister} onPress={() => {
-                navigation.navigate('DrawerMenu');
+                navigation.navigate('Home');
             }}>
                 <Text style={styles.txtRegister}>
                     Login

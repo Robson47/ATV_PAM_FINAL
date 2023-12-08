@@ -1,9 +1,6 @@
-import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, StyleSheet, Text, View, TouchableOpacity, Dimensions } from 'react-native';
-import Feed from './Feed';
-import { useState } from 'react';
+import { SafeAreaView, StyleSheet, Text, View, TouchableOpacity, FlatList } from 'react-native';
 
-export const List = [
+export const Categorias = [
     {
         cod_categoria: 1,
         nome_categoria: 'Esporte',
@@ -46,60 +43,77 @@ export const List = [
     },
 ]
 
-export default function Category() {
-    const [cod_categoria, setCategoria] = useState('Top 10');
-    const setCategoriaFilter = cod_categoria => {
-        setCategoria(cod_categoria)
-    }
+const Item = ({ item }) => {
     return (
         <SafeAreaView style={styles.container}>
-            <View style={styles.listCategory}>
-                {
-                    List.map(cat => (
-                        <TouchableOpacity style={[styles.btnCategory, cod_categoria === cat.cod_categoria && styles.btnCategoryActive]}
-                            onPress={() => setCategoriaFilter(cat.nome_categoria)}
-                        >
-                            <Text style={[styles.btnText, cod_categoria === cat.cod_categoria && styles.btnTextActive]}>
-                                ´${cat.nome_categoria}´
-                            </Text>
-                        </TouchableOpacity>
-                    ))
-                }
+            <View style={styles.item_container}>
+                <View style={styles.item_text_container}>
+                    <Text style={styles.item_title}>{item.nome_categoria}</Text>
+                    <Text style={styles.item_data}>{item.obs_categoria}</Text>
+                    <TouchableOpacity style={styles.item_button_details}><Text style={styles.item_button_text}>Detalhes</Text></TouchableOpacity>
+                </View>
             </View>
         </SafeAreaView>
+    );
+};
+
+export default function Category() {
+    return (
+            <FlatList
+                data={Categorias}
+                renderItem={Item}
+                ListEmptyComponent={<Text>A LISTA DE LIVROS ESTÁ VAZIA...</Text>}
+                keyExtractor={Categorias => Categorias.cod_categoria}
+            />
     );
 }
 
 const styles = StyleSheet.create({
     container: {
+        paddingTop: 40,
         flex: 1,
-        backgroundColor: '#161c3d',
+        backgroundColor: '#000000',
         alignItems: 'center',
         justifyContent: 'center',
     },
-    listCategory: {
+    item_container: {
         flex: 1,
-        backgroundColor: '#fff',
-        padding: 15
-    },
-    btnCategory: {
-        width: Dimensions.get('window').width / 3.5,
+        width: 400,
         flexDirection: 'row',
-        borderWidth: 0.5,
-        borderColor: '#EBEBEB',
         padding: 10,
+        borderRadius: 15,
+        marginBottom: 10,
+        backgroundColor: '#1c1b1c',
+    },
+    item_text_container: {
+        paddingLeft: 50,
+        width: 300,
         justifyContent: 'center',
     },
-    btnCategoryActive: {
-        backgroundColor: 'red'
-    },
-    btnText: {
-        textAlign: 'center',
+    item_data: {
+        color: 'white',
         fontSize: 16,
-        fontWeight: '700',
-        color: 'white'
+        fontWeight: '600',
+        width: '100%',
+        textAlign: 'left',
     },
-    btnTextActive: {
-        color: 'blue'
+    item_title: {
+        color: 'white',
+        fontSize: 45,
+        fontWeight: '600',
+        width: '100%',
+    },
+    item_button_details: {
+        alignItems: 'center',
+        backgroundColor: '#8c00ff',
+        padding: 10,
+        borderRadius: 5,
+        marginTop: 90,
+        width: '100%',
+    },
+    item_button_text: {
+        color: '#FFF',
+        fontSize: 16,
+        fontWeight: 'bold',
     },
 });
